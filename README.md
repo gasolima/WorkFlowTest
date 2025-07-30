@@ -1,1 +1,3 @@
 # WorkFlowTest
+
+test:WorkFlowTest
