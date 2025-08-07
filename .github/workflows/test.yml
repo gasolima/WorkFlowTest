@@ -1,10 +1,10 @@
 name: Hello World
-on: [workflow_dispatch]
+on:
+  pull_request:
+  workflow_dispatch:
 jobs:
   Hello-World-Job:
-    runs-on:
-      - codebuild-1test-${{ github.run_id }}-${{ github.run_attempt }}
-        image:arm-3.0
-        instance-size:small
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello Worlds!"
+      - run: echo "This job only runs when manually triggered"
