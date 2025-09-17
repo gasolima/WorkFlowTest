@@ -28,4 +28,8 @@ jobs:
           echo "before adding mask: $AWS_ACCESS_KEY_ID"
           echo "::add-mask::$AWS_ACCESS_KEY_ID"
           echo "after adding mask: $AWS_ACCESS_KEY_ID"
+          echo "::null before adding mask: $AWS_ACCESS_KEY"
+          echo "::add-mask::$AWS_ACCESS_KEY"
+          echo "::null after adding mask: $AWS_ACCESS_KEY"
+          
 
