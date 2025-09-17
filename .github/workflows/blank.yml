@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Run a multi-line script
         run: |
-          $AWS_ACCESS_KEY_ID="abc"
+          AWS_ACCESS_KEY_ID="abc"
           echo "before adding mask: $AWS_ACCESS_KEY_ID"
           echo "::add-mask::$AWS_ACCESS_KEY_ID"
           echo "after adding mask: $AWS_ACCESS_KEY_ID"
